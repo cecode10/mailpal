@@ -14,12 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class TestJob implements Job {
 
-    private ImapConnector imapConnector;
-
     @Autowired
-    public TestJob(ImapConnector connector) {
-        this.imapConnector = connector;
-    }
+    private ImapConnector imapConnector;
 
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         System.err.println("Polling mail box ...");

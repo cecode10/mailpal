@@ -22,7 +22,7 @@ public class ImapConnector {
         props.setProperty("mail.store.protocol", "imaps");
         Session session = Session.getInstance(props, null);
         Store store = session.getStore();
-        store.connect(null, "test1232ss@mailinator.com", null);
+        store.connect("imap.web.de", "cecode@web.de", "cecode123");
         Folder inbox = store.getFolder("INBOX");
         inbox.open(Folder.READ_ONLY);
         Message msg = inbox.getMessage(inbox.getMessageCount());

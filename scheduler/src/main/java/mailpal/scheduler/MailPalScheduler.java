@@ -29,10 +29,7 @@ public class MailPalScheduler {
         Trigger trigger = newTrigger()
                 .withIdentity("testTrigger", "mailpal")
                 .startNow()
-                .withSchedule(simpleSchedule()
-                        .withIntervalInSeconds(2)
-                        .repeatForever())
-                .build();
+                .withSchedule(simpleSchedule().withIntervalInMinutes(3).withRepeatCount(3)).build();
         scheduler.scheduleJob(job, trigger);
     }
 
