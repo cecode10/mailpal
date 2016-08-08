@@ -3,11 +3,13 @@ package mailpal;
 
 import mailpal.scheduler.MailPalScheduler;
 import org.quartz.SchedulerException;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author tsv
  * @since 17.07.2016.
  */
+@SpringBootApplication
 public class RunScheduler {
 
     public static void main(String [] args) throws SchedulerException {
